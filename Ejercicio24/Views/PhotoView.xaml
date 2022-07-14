@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio24.Views.PhotoView" 
+              xmlns:video="clr-namespace:Xam.Forms.VideoPlayer;assembly=Xam.Forms.VideoPlayer"
+             Title="Tomar Video"
+             BackgroundColor="powderblue"
+             >
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <video:VideoPlayer 
+            Margin="30,10,30,0"
+            x:Name="videoPlayer" 
+            BackgroundColor="White"
+            HorizontalOptions="Center"
+            HeightRequest="300"
+            Source="video.png"
+            />
+
+            <Entry 
+                Placeholder="Ingrese una descripción" 
+                Margin="30,10,30,0" 
+                x:Name="descripcion" />
+
+            <Button 
+                Margin="30,10,30,0" 
+                Text="Grabar Video"
+                CornerRadius="8" 
+                BackgroundColor="darkorange" 
+                x:Name="btnGrabar" 
+                Clicked="btnGrabar_Clicked"/>
+            <Button 
+                Margin="30,10,30,0" 
+                Text="Guardar Video"  
+                CornerRadius="8" 
+                BackgroundColor="darkorange"
+                x:Name="btnSalvar" 
+                Clicked="btnSalvar_Clicked"/>
+            <Button 
+                Margin="30,10,30,0" 
+                Text="Listar Videos"  
+                CornerRadius="8"  
+                BackgroundColor="darkorange" 
+                x:Name="btnlistarvideo" 
+                Clicked="btnlistarvideo_Clicked"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
